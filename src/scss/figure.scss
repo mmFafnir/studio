@@ -1,0 +1,107 @@
+.figure {
+    width: 334px;
+    height: 278px;
+    position: relative;
+    &__circles {
+        width: 99px;
+        height: 99px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+
+    &__item {
+    }
+
+    &__triangles {
+        width: 265px;
+        height: 203px   ;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        > div:last-child{
+            position: relative;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            .triangle{
+                // position: relative;
+                // display: block;
+                left: 0px;
+                bottom: 0px;
+
+                &_small{
+                    top: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                &:last-child{
+                    left: auto;
+                    right: 0px;
+                }
+            }
+            
+        }
+    }
+    
+}
+.circle {
+    border-radius: 50%;
+    
+    &_big {
+        width: 99px;
+        height: 99px;
+        background: rgba(196, 196, 196, 0.2);
+        box-shadow: inset -3px -1px 1px -3px #7A56CE;
+        backdrop-filter: blur(22px);
+        /* Note: backdrop-filter has minimal browser support */
+        transform: rotate(2.49deg);
+        position: relative;
+        z-index: 1;
+    }
+    
+    
+    &_small {
+        position: absolute;
+        width: 41.94px;
+        height: 41.94px;
+        background: linear-gradient(14.29deg, #505AEF -11.76%, #9852B6 145.18%), #505AEF;
+        bottom: -6px;
+        right: -6px;
+    }
+}
+.triangle {
+    position: absolute;
+    // width: 0; 
+    // height: 0;  
+    overflow: hidden;
+
+    
+    &_gray {
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        &:first-child{
+            top: 0px;
+            transform:translateX(-50%);
+        }
+
+        path{
+            fill: rgba(196, 196, 196, 1);
+            box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(22px);
+            fill-opacity: 0.8;
+            /* Note: backdrop-filter has minimal browser support */
+
+            // border-radius: 3px;
+            // transform: rotate(-180deg);
+        }
+    }
+    
+}

@@ -1,13 +1,74 @@
 .header{
     width: 100%;
-
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
     &__wrapper{
-        max-width: 1100px;
+        max-width: $wrapper;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__nav{
+        flex: 0 1 600px;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul{
+            flex: 0 1 350px;    
+            display: flex;
+            justify-content: space-between;
+            align-content: start;
+            font-size: 15px;
+            
+        }
+    }
+    &__lng{
+        font-size: 15px;
+    }
+
+    &__btn{
+        display: flex;
+        flex: 0 1 167px;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        // border: solid 1px #fff;
+        font-size: 10px;
+        position: relative;
+        font-weight: 800;
+        // border-radius: 50px;
+        // border-image-source: linear-gradient(14.29deg, #505AEF -11.76%, #9852B6 145.18%),
+        // linear-gradient(0deg, #505AEF, #505AEF);
+        
+        svg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            left: 0;
+            top: 0;
+        }
+
+    }
+    
+}
+.lng{
+    display: flex;
+    &:before{
+        content: '';
+        display: block;
+        // height: 100%;
+        flex: 0 0 1px;
+        background-color: #fff;
+        order: 1;
+        margin: 0px 7px;
+    }
+    a{
+        &:last-child{
+            order: 1;
+        }
     }
 }
